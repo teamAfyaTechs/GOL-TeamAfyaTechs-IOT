@@ -11,8 +11,8 @@
 String deviceID= "C";
 
 //credentials for WiFi network
-const char* ssid = "Houston";
-const char* password = "Network3";
+const char* ssid = "Doreen";
+const char* password = "AfyaTechs";
 String string2="NoFinger";
 String string1="Finger";
 boolean string_comparison;
