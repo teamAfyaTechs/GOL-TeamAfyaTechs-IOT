@@ -124,7 +124,7 @@ void receive_data()
   Serial.println(clockMode);
   if(clockMode=="G")
   {
-    Serial.println("clocking cancelled");
+    Serial.println("Patient Check-in cancelled");
     return;
   }
   while(Serial2.available()==0){}
@@ -133,11 +133,11 @@ void receive_data()
   Serial.println(clockMode);
   if(clockMode=="A")
   {
-    cMode=1; // 1 maps to clocking out
+    cMode=1; // 1 maps to checking out
   }
   else
   {
-    cMode=0; //0 maps to clocking in
+    cMode=0; //0 maps to checking in
   }
   id=fingerPrintID_Pro.toInt();
   finger_and_deviceID = id + deviceID;
@@ -158,7 +158,7 @@ void postFingerPrintID(String finger_and_deviceID, int clockMode)
 {
   Serial.println("Get Authentication"); //to know that this function is running
   //New IP
-  sprintf(buffer1,"http://41.89.227.241:8002/api/StudentStatusTest/stafflog?fingerId=%s&direction=%d",finger_and_deviceID,clockMode);
+  sprintf(buffer1,"********************************************",finger_and_deviceID,clockMode);
   
   Serial.println(buffer1);
   //Check WiFi connection status - pre-check to confirm we are still connected to the WiFi network, before trying to do the request
