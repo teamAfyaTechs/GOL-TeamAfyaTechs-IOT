@@ -158,7 +158,7 @@ void postFingerPrintID(String finger_and_deviceID, int clockMode)
 {
   Serial.println("Get Authentication"); //to know that this function is running
   //New IP
-  sprintf(buffer1,"********************************************",finger_and_deviceID,clockMode);
+  sprintf(buffer1,"http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",finger_and_deviceID,clockMode);
   
   Serial.println(buffer1);
   //Check WiFi connection status - pre-check to confirm we are still connected to the WiFi network, before trying to do the request
